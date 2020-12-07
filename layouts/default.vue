@@ -1,5 +1,5 @@
 <template>
-  <nuxt />
+    <nuxt />
 </template>
 
 <script>
@@ -35,6 +35,9 @@ export default {
   $dark: #333
   $white: #f6f6f6
   $talentText: #f3eded
+  img
+    width: 100%
+    display: block
   body 
     font-family: "Play", sans-serif
     font-size: 18px
