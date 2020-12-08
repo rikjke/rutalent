@@ -7,6 +7,7 @@
             <Platform />
           </div>
         </main>
+        <Footer />
     </div>
 </template>
 
@@ -15,11 +16,13 @@
 import Header from '../components/Header.vue'
 import Platform from '../components/Platform.vue'
 import TalFilter from '../components/TalFilter.vue'
+import Footer from '../components/Footer'
 export default {
   components: {
     Header,
     Platform,
-    TalFilter
+    TalFilter,
+    Footer
   }
 }
 </script>

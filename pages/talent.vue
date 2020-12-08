@@ -7,7 +7,7 @@
                 <div class="talent-info">
                     <div class="talent__description">
                         <h1>{{talentData.talent}}</h1>
-                        <a :style="{color: talentData.themeColor}" target="_blank" class="talent__link" :href="talentData.talent_links.yt_link"><font-awesome-icon :icon="talentData.platform == 'twitch' ? ['fab', 'twitch'] : ['fab', 'youtube']"/></a>
+                        <a :style="{color: talentData.themeColor}" target="_blank" class="talent__link" :href="talentData.talent_links.main_link"><font-awesome-icon :icon="talentData.platform == 'twitch' ? ['fab', 'twitch'] : ['fab', 'youtube']"/></a>
 
                         <div :style="{color: talentData.themeColor}" class="platform-topic">
                             <span class="platform">{{talentData.platform === "youtube" ? "Youtube" : "Twitch"}}</span> <span class="topic">{{talentData.topic}}</span>  </div>
@@ -20,27 +20,22 @@
                 <Gallery v-if="talentData.gallery" :gallery="talentData.gallery" />
 
 
-                    <div v-if="talentData.talent_links" class="talent-useful">
-                         <h2>Полезные ссылки на {{talentData.talent}}:</h2>
-                        <ul class="talent-links">
-                            <a v-if="talentData.talent_links.yt_link" class="talent-social-link" :href="talentData.talent_links.yt_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'youtube']"/></a>
-                            <a v-if="talentData.talent_links.vk_link" class="talent-social-link" :href="talentData.talent_links.vk_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'vk']"/></a>
-                            <a v-if="talentData.talent_links.tg_link" class="talent-social-link" :href="talentData.talent_links.tg_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'telegram']"/></a>
-                            <a v-if="talentData.talent_links.insta_link" class="talent-social-link" :href="talentData.talent_links.insta_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'instagram']"/></a>
-                        </ul>
-                    </div>
 
-
+                <TalentLinks v-if="talentData.talent_links" :name="talentData.talent" :talent_links="talentData.talent_links" />
+                    
                 </div>
  
-                <div v-if="talentData.videos_src" class="talent__content">
+                <div class="talent__content">
                     <h2>Примеры контента</h2>
                     <VideoList :videos_src="talentData.videos_src" />
                 </div>
 
+                <GoSupport />
+
 
             </div>
         </main>
+        <Footer />
     </div>
     
 </template>
@@ -50,6 +45,9 @@
 import Header from '../components/Header'
 import VideoList from '../components/VideoList'
 import Gallery from '../components/Gallery'
+import GoSupport from '../components/GoSupport'
+import TalentLinks from '../components/TalentLinks'
+import Footer from '../components/Footer'
 import {mapGetters} from 'vuex'
 export default {
     created () {
@@ -62,7 +60,10 @@ export default {
     components: {
         Header,
         VideoList,
-        Gallery
+        Gallery,
+        GoSupport,
+        TalentLinks,
+        Footer
     },
     props: {
         talentURL: String
@@ -88,28 +89,11 @@ export default {
 </script>
 
 <style scoped lang="sass">
-    .talent-social-link
-        margin-right: 20px
-        font-size: 45px
-        svg
-            transition: .4s ease all
-            padding: 5px
-            &:hover
-                transform: translateY(-5px)
-        &:last-child
-            margin-right: 0px
-    .talent-useful
-        margin-top: 25px
-        h2
-            font-size: 24px
-            margin: 10px 0
-            font-weight: bold
-    .talent-links
-        display: flex
     .talent__p
         margin: 10px 0
         color: var(--dark)
         font-size: 20px
+        text-indent: 35px
     .talent-main
         padding: 0 20px
         display: grid

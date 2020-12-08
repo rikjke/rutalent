@@ -2,12 +2,14 @@
     <div class="platform">
         <div class="switcher-wrapper">
             <div class="switcher">
-                <a @click="YT_change"  :class="YT_STATE ? 'switch_youtube switch switch_active' : 'switch'">Youtube</a>
-                <a @click="YT_change"  :class="!YT_STATE ? 'switch_twitch switch switch_active' : 'switch'">Twitch</a>
+                <!-- <a @click="YT_change"  :class="YT_STATE ? 'switch_youtube switch switch_active' : 'switch'">Youtube</a>
+                <a @click="YT_change"  :class="!YT_STATE ? 'switch_twitch switch switch_active' : 'switch'">Twitch</a> -->
+
+                <button :style="platform.active ? {backgroundColor: platform.color} : ''" :class="platform.active ? 'switch switch_active' : 'switch'" v-for="(platform, index) in PLATFORMS" :key="index" @click="platform_pick(index)">{{platform.platform}}</button>
             </div>
         </div>
 
-        <TalentList :activeYT="activeYT"/>
+        <TalentList :platform="platform" />
     </div>
 </template>
 
@@ -15,22 +17,29 @@
 import {mapGetters, mapActions} from 'vuex'
 import TalentList from './TalentList'
 export default {
+    created () {
+        this.platform_pick(0);
+    },
     computed: {
         ...mapGetters([
-            'YT_STATE'
+            'YT_STATE',
+            'PLATFORMS'
+
         ])
     },
     methods: {
         ...mapActions([
-            'UPDATE_YT'
+            'UPDATE_YT',
+            'PLATFORM_PICK'
         ]),
-        YT_change() {
-            this.UPDATE_YT()
+        platform_pick(index) {
+            this.PLATFORM_PICK(index)
         }
     },
     data() {
         return {
-            activeYT: true
+            activeYT: true,
+            platform: null,
         }
     },
     components: {
@@ -45,16 +54,19 @@ export default {
     .switcher 
         text-align: center
         margin-top: 40px
-    
-    .switch 
-        cursor: pointer
-        transition: .4s ease
     .switch 
         text-decoration: none
+        cursor: pointer
+        transition: .4s ease
         font-size: 20px
+        margin-right: 10px
         padding: 6px 24px
         border-radius: 10px
         color: var(--dark)
+        &:focus
+            outline: none
+        &:last-child
+            margin-right: 0px
     .switch_active 
         color: var(--white)
         &.switch_youtube

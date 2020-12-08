@@ -1,14 +1,14 @@
 <template>
     <section class="talents-section">
-        <div v-if="YT_STATE" class="talent-list youtube">
+        <div class="talent-list">
             
-            <Talent v-for="talent in YOUTUBE_DATA[0].talents" :talentData="talent" :key="talent.id" />  
+            <Talent v-for="talent in OUTPUT" :talentData="talent" :key="talent.id" />  
 
         </div>
 
-        <div v-else class="talent-list twitch">
+        <!-- <div v-else class="talent-list twitch">
             <Talent v-for="talent in TWITCH_DATA[0].talents" :talentData="talent" :key="talent.id" />
-        </div>
+        </div> -->
     </section>
 </template>
 
@@ -24,7 +24,13 @@ export default {
             'YT_STATE',
             'TWITCH_DATA',
             'YOUTUBE_DATA',
-        ])
+            'OUTPUT'
+        ]),
+    },
+    props: {
+        platform: {
+            type: Object
+        },
     },
 }
 </script>
@@ -38,5 +44,6 @@ export default {
         row-gap: 50px;
         transition: .4s ease all;
         max-width: 1400px;
+        padding: 0 40px
     }
 </style>

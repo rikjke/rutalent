@@ -31,10 +31,14 @@ export default {
 </script>
 
 <style lang="sass">
+
   $mainColor: #6441A4
   $dark: #333
   $white: #f6f6f6
   $talentText: #f3eded
+  .highlighted
+    color: var(--dark)
+    font-weight: 700
   img
     width: 100%
     display: block

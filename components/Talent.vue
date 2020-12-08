@@ -1,5 +1,5 @@
 <template>
-    <div @mouseleave="TALENT_HOVER_OFF" @mouseover="TALENT_HOVER_ON" :class="YT_STATE ? 'talent-wrapper talent-youtube' : 'talent-wrapper talent-twitch'">
+    <div @mouseleave="TALENT_HOVER_OFF" @mouseover="TALENT_HOVER_ON" :class="`talent-wrapper talent-${talentData.platform}`">
         <div class="talent__date">Статья актуальна на {{talentData.date}}</div>
         <NuxtLink class="talent__link" :to="{name : 'talent', params: {talentURL: talentData.talentURL}}" >
                 
