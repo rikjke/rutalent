@@ -69,9 +69,11 @@ export default {
 .talent-wrapper
     border-radius: 15px
     color: var(--dark)
+    max-width: 450px
     transition: .4s ease all, 1s ease box-shadow
     display: flex
     flex-direction: column
+    margin: 0 auto
     &.talent-youtube
         .talent__bottom
             background: var(--red)
@@ -93,9 +95,8 @@ export default {
     background: var(--white)
 .talent__img 
     display: block
-    width: 100%
     background: var(--white)
-
+    width: 100%
 .talent__main 
     display: flex
     justify-content: space-between

@@ -3,7 +3,7 @@
         <Header />
 
         <main class="main">
-            <div class="talent-main">
+            <section class="talent-main">
                 <div class="talent-info">
                     <div class="talent__description">
                         <h1>{{talentData.talent}}</h1>
@@ -33,7 +33,7 @@
                 <GoSupport />
 
 
-            </div>
+            </section>
         </main>
         <Footer />
     </div>
@@ -92,7 +92,7 @@ export default {
         font-size: 20px
         text-indent: 35px
     .talent-main
-        padding: 0 20px
+        padding: 0 40px
         display: grid
         grid-template-columns: 8fr 5fr
         // display: flex

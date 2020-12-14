@@ -1,11 +1,11 @@
 <template>
     <div class="page">
         <Header />
-        <TalFilter />
+        <!-- <TalFilter /> -->
         <main class="main">
-          <div class="main-wrapper">
+          <section class="main-wrapper">
             <Platform />
-          </div>
+          </section>
         </main>
         <Footer />
     </div>
@@ -32,8 +32,5 @@ export default {
 
   .main-wrapper {
     display: flex;
-  }
-  .main {
-    padding-left: 100px
   }
 </style>

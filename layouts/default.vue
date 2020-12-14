@@ -49,7 +49,9 @@ export default {
     color: var(--dark)
   .main
     background: var(--lightGray)
-    padding: 94px 25px
+    padding: 94px 0px
+  section
+    padding: 0px 25px
   *
     margin: 0
     padding: 0
@@ -59,7 +61,7 @@ export default {
     --dark: #333333
     --white: #f6f6f6
     --talentText: #f3eded
-    --red: #FF0000
+    --red: #f04653
     --lightGray: 	#f0f0f0
   
   ::selection 
