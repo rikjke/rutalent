@@ -2,7 +2,7 @@
     <section class="talents-section">
         <div class="talent-list">
             
-            <Talent v-for="talent in OUTPUT" :talentData="talent" :key="talent.id" />  
+            <Talent v-for="talent in OUTPUT" :talentData="talent" :key="talent.talentURL" />  
 
         </div>
 

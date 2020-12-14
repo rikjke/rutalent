@@ -53,7 +53,6 @@ export default {
         width: 100%
     .switcher 
         text-align: center
-        margin-top: 40px
     .switch 
         text-decoration: none
         cursor: pointer

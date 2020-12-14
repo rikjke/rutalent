@@ -4,7 +4,7 @@
 
         <div class="gallery">
             <figure v-for="photo in gallery" :key="photo" class="gallery__item">
-                <img class="gallery__img" :src="require(`../assets/img/${photo}`)"  alt="">
+                <img class="gallery__img" :src="require(`../assets/img/${talentCode}/${photo}`)"  alt="">
             </figure>
         </div>
                 <!-- :src="require(`../assets/img/${photo}`)" -->
@@ -16,6 +16,9 @@ export default {
         gallery: {
             type: Array
         },
+        talentCode: {
+            type: String
+        }
     },
 }
 </script>

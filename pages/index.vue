@@ -8,7 +8,7 @@
             <NuxtLink to="/talents" class="message__link">Таланты</NuxtLink>
           </div>
           <div class="message">
-            <p>На странице <span class="highlighted">Таланты</span> есть два набора карточек для каждой платформы (Youtube и Twitch). В карточке есть аватарка, категория/рубрика и короткое описание таланта.</p>
+            <p>На странице <NuxtLink to="/talents" class="highlighted">Таланты</NuxtLink> есть два набора карточек для каждой платформы (Youtube и Twitch). В карточке есть аватарка, категория/рубрика и короткое описание таланта.</p>
             <p>Нажав на карточку, ты перейдешь на страницу с подробным описанием того, кого ты выбрал</p>
           </div>
           <div class="message">
@@ -38,8 +38,6 @@ export default {
   display: grid
   grid-template-columns: 1fr
   grid-gap: 60px
-.home-main
-  padding: 120px 0
 .message
     max-width: 680px
     text-align: center

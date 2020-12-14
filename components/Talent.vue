@@ -4,7 +4,7 @@
         <NuxtLink class="talent__link" :to="{name : 'talent', params: {talentURL: talentData.talentURL}}" >
                 
                 <div class="talent">
-                    <img class="talent__img" :src="CARD_IMG" alt="">
+                    <img class="talent__img" :src="require(`../assets/img/${this.talentData.talentCode}/${this.talentData.cardImg}`)" alt="">
                     <div class="talent__bottom">
                         <div class="talent__main">
                             <h3 class="talent__name">{{talentData.talent}}</h3>
@@ -37,10 +37,7 @@ export default {
     computed: {
         ...mapGetters([
             'YT_STATE',
-        ]),
-        CARD_IMG() {
-            return require(`../assets/img/${this.talentData.cardImg}`);
-        }
+        ])
     },
     data() {
         return {

@@ -49,6 +49,7 @@ export default {
     color: var(--dark)
   .main
     background: var(--lightGray)
+    padding: 94px 25px
   *
     margin: 0
     padding: 0
@@ -64,8 +65,5 @@ export default {
   ::selection 
     background-color: var(--mainColor)
     color: #fff
-  
-  .main 
-    padding: 64px 25px
-  
+
 </style>

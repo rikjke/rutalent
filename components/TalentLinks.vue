@@ -2,10 +2,11 @@
     <div class="talent-useful">
         <h2>Полезные ссылки на {{name}}:</h2>
         <ul class="talent-links">
-            <a v-if="talent_links.main_link" class="talent-social-link" :href="talent_links.main_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'youtube']"/></a>
-            <a v-if="talent_links.vk_link" class="talent-social-link" :href="talent_links.vk_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'vk']"/></a>
-            <a v-if="talent_links.tg_link" class="talent-social-link" :href="talent_links.tg_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'telegram']"/></a>
-            <a v-if="talent_links.insta_link" class="talent-social-link" :href="talent_links.insta_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'instagram']"/></a>
+            <a target="_blank" v-if="talent_links.yt_link" class="talent-social-link" :href="talent_links.yt_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'youtube']"/></a>
+            <a target="_blank" v-if="talent_links.twitch_link" class="talent-social-link" :href="talent_links.twitch_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'twitch']"/></a>
+            <a target="_blank" v-if="talent_links.vk_link" class="talent-social-link" :href="talent_links.vk_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'vk']"/></a>
+            <a target="_blank" v-if="talent_links.tg_link" class="talent-social-link" :href="talent_links.tg_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'telegram']"/></a>
+            <a target="_blank" v-if="talent_links.insta_link" class="talent-social-link" :href="talent_links.insta_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'instagram']"/></a>
         </ul>
     </div>
 </template>

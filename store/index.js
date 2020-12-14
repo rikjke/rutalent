@@ -12,6 +12,12 @@ export const state = () => ({
     listOutput: youtubeData,
     platforms: [
         {
+            indicator: "all",
+            platform: 'Все платформы',
+            active: false,
+            color: 'var(--dark)'
+        },
+        {
             indicator: "youtube",
             platform: 'Youtube',
             active: true,
@@ -22,12 +28,6 @@ export const state = () => ({
             platform: 'Twitch',
             active: false,
             color: 'var(--mainColor)'
-        },
-        {
-            indicator: "all",
-            platform: 'Все платформы',
-            active: false,
-            color: 'var(--dark)'
         }
 
     ]

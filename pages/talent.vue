@@ -7,17 +7,17 @@
                 <div class="talent-info">
                     <div class="talent__description">
                         <h1>{{talentData.talent}}</h1>
-                        <a :style="{color: talentData.themeColor}" target="_blank" class="talent__link" :href="talentData.talent_links.main_link"><font-awesome-icon :icon="talentData.platform == 'twitch' ? ['fab', 'twitch'] : ['fab', 'youtube']"/></a>
+                        <a :style="{color: talentData.themeColor}" target="_blank" class="talent__link" :href="talentData.platform == 'twitch' ? talentData.talent_links.twitch_link : talentData.talent_links.yt_link"><font-awesome-icon :icon="talentData.platform == 'twitch' ? ['fab', 'twitch'] : ['fab', 'youtube']"/></a>
 
                         <div :style="{color: talentData.themeColor}" class="platform-topic">
                             <span class="platform">{{talentData.platform === "youtube" ? "Youtube" : "Twitch"}}</span> <span class="topic">{{talentData.topic}}</span>  </div>
                     </div>
-                    <img class="talent__img" :src="IMG" alt="">
+                    <img class="talent__img" :src="require(`../assets/img/${this.talentData.talentCode}/${this.talentData.img}`)" alt="">
 
                     <div v-for="p in talentData.text_about" :key="p" class="talent__p">{{p}}</div>
 
 
-                <Gallery v-if="talentData.gallery" :gallery="talentData.gallery" />
+                <Gallery v-if="talentData.gallery" :talentCode="talentData.talentCode" :gallery="talentData.gallery" />
 
 
 
@@ -78,10 +78,7 @@ export default {
             'YT_STATE',
             'YOUTUBE_DATA',
             'TWITCH_DATA'
-      ]),
-        IMG() {
-            return require(`../assets/img/${this.talentData.img}`);
-      }
+      ])
     },
 }
 
@@ -133,5 +130,5 @@ export default {
         transition: .6s ease
         transform: scale(1)
         &:hover
-            transform: scale(1.3)
+            transform: scale(1.2)
 </style>
