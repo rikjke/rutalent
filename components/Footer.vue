@@ -1,6 +1,8 @@
 <template>
     <footer class="footer">
-        <h3>RuTalent made by Rikjke {{new Date().getFullYear()}}</h3>
+        <div class="footer-text">
+            <img src="../assets/img/talents.svg" alt="logotype-white"><h3> made by Rikjke {{new Date().getFullYear()}}</h3>
+        </div>
     </footer>
 </template>
 
@@ -15,9 +17,16 @@ export default {
         position: relative
         bottom: 0
         padding: 30px 0
-        background: var(--dark)
-        color: var(--white)
+        background: var(--white)
+        color: var(--dark)
         text-align: center
         h3
             letter-spacing: 1.5px
+    .footer-text
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        img
+            width: 150px
+            margin-right: 15px
 </style>

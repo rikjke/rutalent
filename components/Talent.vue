@@ -4,7 +4,7 @@
         <NuxtLink class="talent__link" :to="{name : 'talent', params: {talentURL: talentData.talentURL}}" >
                 
                 <div class="talent">
-                    <img class="talent__img" :src="require(`../assets/img/${this.talentData.talentCode}/${this.talentData.cardImg}`)" alt="">
+                        <img slot="image" class="talent__img" :src="require(`../assets/img/${this.talentData.talentCode}/${this.talentData.cardImg}`)" alt="">
                     <div class="talent__bottom">
                         <div class="talent__main">
                             <h3 class="talent__name">{{talentData.talent}}</h3>
@@ -48,7 +48,7 @@ export default {
     props: {
         talentData: {
             type: Object
-        },
+        }
     },
 }
 </script>
@@ -90,9 +90,9 @@ export default {
     height: 100%
 .talent__date
     text-align: center
-    background-color: rgba(255,255,255,.5)
+    color: var(--white)
     border-radius: 15px 15px 0 0
-    background: var(--white)
+    background: var(--dark)
 .talent__img 
     display: block
     background: var(--white)

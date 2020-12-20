@@ -24,7 +24,10 @@ export default {
     Footer,
     Message,
     CardDescription
-  }
+  },
+  meta: [
+    
+  ]
 }
 </script>
 

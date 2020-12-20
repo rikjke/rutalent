@@ -5,7 +5,7 @@
                 <!-- <a @click="YT_change"  :class="YT_STATE ? 'switch_youtube switch switch_active' : 'switch'">Youtube</a>
                 <a @click="YT_change"  :class="!YT_STATE ? 'switch_twitch switch switch_active' : 'switch'">Twitch</a> -->
 
-                <button :style="platform.active ? {backgroundColor: platform.color} : ''" :class="platform.active ? 'switch switch_active' : 'switch'" v-for="(platform, index) in PLATFORMS" :key="index" @click="platform_pick(index)">{{platform.platform}}</button>
+                <button :style="platform.active ? {background: platform.color} : {background: '#fff'}" :class="platform.active ? 'switch switch_active' : 'switch'" v-for="(platform, index) in PLATFORMS" :key="index" @click="platform_pick(index)">{{platform.platform}}</button>
             </div>
         </div>
 
@@ -68,8 +68,4 @@ export default {
             margin-right: 0px
     .switch_active 
         color: var(--white)
-        &.switch_youtube
-            background-color: var(--red)
-        &.switch_twitch
-            background-color: var(--mainColor)
 </style>

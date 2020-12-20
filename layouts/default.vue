@@ -1,9 +1,17 @@
 <template>
+  <div>
     <nuxt />
+    <ScrollToTop />
+  </div>
 </template>
 
 <script>
+import ScrollToTop from '../components/ScrollToTop'
+
 export default {
+  components: {
+    ScrollToTop,
+  },
   data () {
     return {
       clipped: false,
@@ -37,7 +45,6 @@ export default {
   $white: #f6f6f6
   $talentText: #f3eded
   .highlighted
-    color: var(--dark)
     font-weight: 700
   img
     width: 100%
@@ -46,9 +53,9 @@ export default {
     font-family: "Play", sans-serif
     font-size: 18px
     overflow-x: hidden
-    color: var(--dark)
+    color: var(--white)
   .main
-    background: var(--lightGray)
+    background: var(--dark)
     padding: 94px 0px
   section
     padding: 0px 25px

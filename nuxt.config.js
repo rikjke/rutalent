@@ -21,18 +21,18 @@ module.exports = {
    ]
  }   
 }
+
 export default {
   router: {
     extendRoutes(routes, resolve) {
       routes.find((r) => r.name === 'talent').path = '/talents/:talentURL'
       routes.find((r) => r.name === 'talent').props = true
-    }, 
+    },
   },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - rutalent',
-    title: 'rutalent',
+    title: 'talent',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

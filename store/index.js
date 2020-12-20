@@ -15,7 +15,7 @@ export const state = () => ({
             indicator: "all",
             platform: 'Все платформы',
             active: false,
-            color: 'var(--dark)'
+            color: 'linear-gradient(135deg, rgba(62,15,107,1) 0%, rgba(119,9,158,1) 52%, rgba(148,8,8,1) 55%, rgba(232,0,0,1) 100%)'
         },
         {
             indicator: "youtube",

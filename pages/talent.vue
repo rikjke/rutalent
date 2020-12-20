@@ -88,7 +88,6 @@ export default {
 <style scoped lang="sass">
     .talent__p
         margin: 10px 0
-        color: var(--dark)
         font-size: 20px
         text-indent: 35px
     .talent-main
