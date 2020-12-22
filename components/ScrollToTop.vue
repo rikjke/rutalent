@@ -31,9 +31,13 @@ export default {
 <style scoped>
     .scroll-to-top {
         position: fixed;
-        bottom: 50px;
-        right: 40px;
-        color: var(--mainColor)
+        bottom: 0;
+        right: 0;
+        padding: 9px;
+        border-radius: 15px 0 0 0;
+        background: var(--mainColor);
+        color: var(--white)
+        
     }
     .scroll-to-top .icon {
         font-size: 30px;
@@ -42,10 +46,6 @@ export default {
     .scroll-to-top:hover .icon {
         transform: scale(1.2)
     }
- @media (max-width: 680px) {
-     .scroll-to-top {
-         color: #333;
-     }
- }
+
 </style>
     

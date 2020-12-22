@@ -7,7 +7,6 @@
                 "id": 0,
                 "talentCode": "hesus",
                 "talent": "JesusAVGN",
-                "verified": true,
                 "topic": "Игры",
                 "themeColor": "#6441A4",
                 "shortDescription": "Прохождение свежих игр, хорроров, реакции на видео на Youtube, обсуждение тем твича, коллабы со стримерами",
@@ -49,7 +48,6 @@
                 "id": 1,
                 "talentCode": "evelone",
                 "talent": "Evelone192",
-                "verified": true,
                 "topic": "Игры",
                 "themeColor": "#6441A4",
                 "shortDescription": "Эвелон стримит CS:GO и делает мини-турниры, смотрит видео, проводит шоу с ребятами из FREAK SQUAD и другими известными личностями",
@@ -91,7 +89,6 @@
                 "id": 2,
                 "talentCode": "buster",
                 "talent": "Buster",
-                "verified": true,
                 "topic": "Игры",
                 "themeColor": "#6441A4",
                 "shortDescription": "Один из лидирующих стримеров ру-твича по онлайну, участник FREAK SQUAD, человек, который любит маму, а также обладатель большого %$&#@",
@@ -127,6 +124,86 @@
                     "https://www.youtube.com/embed/yusV1wJAQP8",
                     "https://www.youtube.com/embed/rqHF0TNA3jQ",
                     "https://www.youtube.com/embed/YZfniOFxh5I"
+                ]
+            },
+            {
+                "id": 3,
+                "talentCode": "aloha",
+                "talent": "ALOHADANCE",
+                "topic": "Игры",
+                "themeColor": "#6441A4",
+                "shortDescription": "Илья Коробкин aka Харьковский гуль, Dead Inside, лучший Morphling Украины и самая большая рыба на твоем покерном столе",
+                "cardImg": "aloha-card.jpg",
+                "date": "20.12.2020",
+                "talentURL": "alohadance",
+                "img": "aloha.jpg",
+                "platform": "twitch",
+                "text_about": [
+                    "ALOHADANCE (Илья Коробкин) начал набирать свой онлайн еще в далекие годы на стримах по Dota 2, но добиться успеха у Илья получилось не только на стримах, но и в самой киберспортивной дисциплине. В 2015 году он выступил на 'The International', самом престижном турнире по Доте в составе команды 'Team Empire'. После Алоха присоединился к команде 'Vega Squadron', где выступал несколько лет и в которой больше всего запомнился зрителям как профессиональный игрок.",
+                    "Профессиональная карьера Ильи была нестабильна, он часто брал перерывы от про-сцены и полностью уходил в стриминг. У Алохи были моменты, когда он стримил практически круглосуточно на протяжении длительного периода. И это стоило того, ведь ALOHADANCE стал одним из самых популярных стримеров Доты, собирая на каждом стриме толпы зрителей.",
+                    "В последнее время на трансляциях часто можно увидеть игру в Покер. В 2019 году Алоху можно было увидеть на турнире по покеру в Сочи. Видимо, это игра серьезно заинтересовала его, и ему удалось добиться успеха и в этой стезе: Илья занял 5 место на турнире Stadium Series, где заработал $41 тысячу, что, в целом, даже не единственное и тем более не последнее достижение Алохи в покере. Также стоит отметить об его игре в покер 1х1 с Папичем, который до своего бана на площадке был одним из самых популярных стримеров RU-твича.",
+                    "Стримы на канале проходят довольно таки часто, сейчас на трансляциях можно увидеть в основном Dota 2 или Poker, но иногда бывают и другие игры."  
+
+                ],
+                "gallery": [
+                    "1.jpg",
+                    "2.jpg",
+                    "3.jpg",
+                    "4.jpg",
+                    "5.jpg",
+                    "6.jpg"
+                ],
+                "talent_links": {
+                    "twitch_link": "https://www.twitch.tv/alohadancetv",
+                    "yt_link": "https://www.youtube.com/channel/UCwMNQz-VQ_nmuxA0691EXTQ",
+                    "vk_link": "https://vk.com/alohadancee",
+                    "insta_link": "https://www.instagram.com/alohadanceq"
+                },
+                "videos_src": [
+                    "https://www.youtube.com/embed/H76ccAuhWpk",
+                    "https://www.youtube.com/embed/bcyVD8J7XTM",
+                    "https://www.youtube.com/embed/na7ymGHNjno",
+                    "https://www.youtube.com/embed/2bSMYI-lqL4",
+                    "https://www.youtube.com/embed/iVWSsF-jCds"
+                ]
+            },
+            {
+                "id": 4,
+                "talentCode": "lixxx",
+                "talent": "Dmitry_Lixxx",
+                "topic": "Игры",
+                "themeColor": "#6441A4",
+                "shortDescription": "Самый возрастной участник 'FREAK SQUAD', Дима Ликс, ребенок, застрявший в теле человека, которому уже за тридцать",
+                "cardImg": "lixxx-card.jpg",
+                "date": "21.12.2020",
+                "talentURL": "dmitry_lixxx",
+                "img": "lixxx.jpg",
+                "platform": "twitch",
+                "text_about": [
+                    "Дмитрий Ликс (a.k.a Лорд Гузлик) начал набирать своих зрителей, записывая ролики на Youtube по Фортнайту. Играя в эту игру, он подружился с другими Fortnine-стримерами, многих из которых сейчас можно увидеть в 'FREAK SQUAD'. К 2020 году Дима Ликс перестал вести активность на ютубе, начав стримить на твиче как один, так и вместе с друзьями.",
+                    "Как и многие другие Фортнайт-стримеры, Ликс перешел на другой контент. Сейчас на трансляциях можно увидеть различные шоу, например 'Сто к одному', просмотр роликов Youtube или коллаборации с другими стримерами, чаще всего из Фрик Сквада. Также Дима Ликс начал качать свой скилл в  игре CS:GO, трансляции по которой можно видеть на канале всё чаще.",
+                    "Стримы проходят практически каждый день на Твиче, обычно с 10-12 утра до 2-3 дня. Также Ликса всегда можно увидеть на стримах у других ребят из FREAK SQUAD. Ссылка на Twitch-канал и другие платформы будут ниже."
+                ],
+                "gallery": [
+                    "1.jpg",
+                    "2.jpg",
+                    "3.jpg",
+                    "4.jpg",
+                    "5.jpg",
+                    "6.jpg"
+                ],
+                "talent_links": {
+                    "twitch_link": "https://www.twitch.tv/dmitry_lixxx",
+                    "yt_link": "https://www.youtube.com/c/DmitryLixxx/",
+                    "vk_link": "https://vk.com/dmitrylixxx",
+                    "insta_link": "https://www.instagram.com/dima_lixx"
+                },
+                "videos_src": [
+                    "https://www.youtube.com/embed/zmeq3bls38M",
+                    "https://www.youtube.com/embed/OsWFvYVA_Hc",
+                    "https://www.youtube.com/embed/dgwql22jiL8",
+                    "https://www.youtube.com/embed/zQc2xnidTw4",
+                    "https://www.youtube.com/embed/s4o91xI2p8s"
                 ]
             }
         ]

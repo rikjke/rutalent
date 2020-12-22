@@ -38,7 +38,7 @@ export default {
     text-align: center
     color: var(--white)
     background-color: var(--mainColor)
-    padding: 35px
+    padding: 25px
     margin: 0 auto
     border-radius: 15px
     p

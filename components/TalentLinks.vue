@@ -7,6 +7,7 @@
             <a target="_blank" v-if="talent_links.vk_link" class="talent-social-link" :href="talent_links.vk_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'vk']"/></a>
             <a target="_blank" v-if="talent_links.tg_link" class="talent-social-link" :href="talent_links.tg_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'telegram']"/></a>
             <a target="_blank" v-if="talent_links.insta_link" class="talent-social-link" :href="talent_links.insta_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'instagram']"/></a>
+            <a target="_blank" v-if="talent_links.patreon_link" class="talent-social-link" :href="talent_links.patreon_link"><font-awesome-icon class="talent-link__icon" :icon="['fab', 'patreon']"/></a>
         </ul>
     </div>
 </template>
@@ -30,6 +31,7 @@ export default {
     .talent-social-link
         margin-right: 20px
         font-size: 45px
+        color: var(--mainColor)
         svg
             transition: .4s ease all
             padding: 5px

@@ -63,14 +63,13 @@ export default {
     .talent_light
         opacity: 1
         transform: scale(1.05)
-        -webkit-box-shadow: 0px 14px 36px 9px rgba(87,87,87,0.52)
-        -moz-box-shadow: 0px 14px 36px 9px rgba(87,87,87,0.52)
-        box-shadow: 0px 14px 36px 9px rgba(87,87,87,0.52)
+        -webkit-box-shadow: 0px 5px 12px 9px rgba(255,255,255,0.2)
+        -moz-box-shadow: 0px 5px 12px 9px rgba(255,255,255,0.2)
+        box-shadow: 0px 5px 12px 9px rgba(255,255,255,0.2)
 .talent-wrapper
     border-radius: 15px
     color: var(--dark)
-    max-width: 450px
-    transition: .4s ease all, 1s ease box-shadow
+    transition: .4s ease all, .75s ease box-shadow
     display: flex
     flex-direction: column
     margin: 0 auto

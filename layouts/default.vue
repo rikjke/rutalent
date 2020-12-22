@@ -40,12 +40,10 @@ export default {
 
 <style lang="sass">
 
-  $mainColor: #6441A4
-  $dark: #333
-  $white: #f6f6f6
-  $talentText: #f3eded
+  
   .highlighted
     font-weight: 700
+    color: var(--mainColor)
   img
     width: 100%
     display: block
@@ -55,7 +53,7 @@ export default {
     overflow-x: hidden
     color: var(--white)
   .main
-    background: var(--dark)
+    background: var(--black)
     padding: 94px 0px
   section
     padding: 0px 25px
@@ -66,13 +64,15 @@ export default {
   :root 
     --mainColor: #6441A4
     --dark: #333333
-    --white: #f6f6f6
+    --white: #dfdfdf
     --talentText: #f3eded
     --red: #f04653
     --lightGray: 	#f0f0f0
+    --black: #1f1f23
   
   ::selection 
     background-color: var(--mainColor)
-    color: #fff
-
+    color: var(--white)
+  a
+    color: var(--white)
 </style>

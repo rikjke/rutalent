@@ -14,7 +14,7 @@
                     </div>
                     <img class="talent__img" :src="require(`../assets/img/${this.talentData.talentCode}/${this.talentData.img}`)" alt="">
 
-                    <div v-for="p in talentData.text_about" :key="p" class="talent__p">{{p}}</div>
+                    <p v-for="p in talentData.text_about" :key="p" v-html="p" class="talent__p"></p>
 
 
                 <Gallery v-if="talentData.gallery" :talentCode="talentData.talentCode" :gallery="talentData.gallery" />
@@ -90,6 +90,7 @@ export default {
         margin: 10px 0
         font-size: 20px
         text-indent: 35px
+        line-height: 26px
     .talent-main
         padding: 0 40px
         display: grid
