@@ -1,13 +1,16 @@
 <template>
             <header id="header" class="header">
                 <!-- <v-app-bar-nav-icon class="hamburger" @click="toggleActive"></v-app-bar-nav-icon> -->
-                <span class="hamburger" @click="toggleActive">MENU</span>
+                <!-- <span class="hamburger" @click="toggleActive">Меню</span> -->
+                <font-awesome-icon @click="toggleActive" class="hamburger" :icon="['fas', 'bars']"/>
                 <nav :class="active ? 'navbar navbar_active' : 'navbar'">
                     <ul class="menu">
                         <li @click="toggleActive" class="menu__item"><NuxtLink class="menu__link" to="/" exact>Главная</NuxtLink></li>
                         <li @click="toggleActive" class="menu__item"><NuxtLink class="menu__link" to="/talents" exact>Таланты</NuxtLink></li>
                         <li @click="toggleActive" class="menu__item"><NuxtLink class="menu__link" no-prefetch to="/support" exact>Помочь проекту</NuxtLink></li>
                     </ul>
+
+                    <font-awesome-icon @click="toggleActive" class="close" :icon="['fas', 'times-circle']"/>
                      <!-- <v-icon @click="toggleActive" class="close">mdi-chevron-left</v-icon> -->
                      <div class="menu__mobile">
                          <img src="../assets/img/talents-white.svg" alt="logotype Talents" class="header-logo">
@@ -127,4 +130,5 @@ h2
     .menu__item
         align-self: flex-start
         margin-right: 0
+        margin-bottom: 15px
 </style>

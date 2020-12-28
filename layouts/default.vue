@@ -37,7 +37,7 @@
   .main
     padding: 94px 0px 124px
   section
-    padding: 0px 5px
+    padding: 0px 10px
   *
     margin: 0
     padding: 0

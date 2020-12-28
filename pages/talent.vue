@@ -15,12 +15,9 @@
                         <v-runtime-template class="talent__p" v-for="p in talentData.text_about" :key="p" :template="`${p}`"></v-runtime-template>
                     <!-- </p> -->
 
-
-                <Gallery v-if="talentData.gallery" :talentCode="talentData.talentCode" :gallery="talentData.gallery" />
-
+                     <Gallery v-if="talentData.gallery" :talentCode="talentData.talentCode" :gallery="talentData.gallery" />
 
 
-                <TalentLinks v-if="talentData.talent_links" :name="talentData.talent" :talent_links="talentData.talent_links" />
                     
                 </div>
 
@@ -29,6 +26,8 @@
 
                     <VideoList :videos_src="talentData.videos_src" />
                 </div>
+                <TalentLinks v-if="talentData.talent_links" :name="talentData.talent" :talent_links="talentData.talent_links" />
+
 
                 <GoSupport />
 
