@@ -22,6 +22,7 @@
     "v-runtime-template": "^1.10.0",
     "vue-burger-menu": "^2.0.5",
     "vue-load-image": "^0.1.12",
+    "vue-plyr": "^7.0.0",
     "vue-sanitize": "^0.2.1",
     "vue2-smooth-scroll": "^1.5.0"
   },

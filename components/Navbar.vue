@@ -6,19 +6,19 @@
                 <nav :class="active ? 'navbar navbar_active' : 'navbar'">
                     <ul class="menu">
                         <li @click="toggleActive" class="menu__item"><NuxtLink class="menu__link" to="/" exact>Главная</NuxtLink></li>
-                        <li @click="toggleActive" class="menu__item"><NuxtLink class="menu__link" to="/talents" exact>Таланты</NuxtLink></li>
+                        <li @click="toggleActive" class="menu__item"><NuxtLink class="menu__link" to="/talents" >Таланты</NuxtLink></li>
                         <li @click="toggleActive" class="menu__item"><NuxtLink class="menu__link" no-prefetch to="/support" exact>Помочь проекту</NuxtLink></li>
                     </ul>
 
                     <font-awesome-icon @click="toggleActive" class="close" :icon="['fas', 'times-circle']"/>
                      <!-- <v-icon @click="toggleActive" class="close">mdi-chevron-left</v-icon> -->
                      <div class="menu__mobile">
-                         <img src="../assets/img/talents-white.svg" alt="logotype Talents" class="header-logo">
+                         <img src="../assets/img/amongtalents.svg" alt="amongtalents-logo" class="header-logo">
                          <h2>Таланты со всех площадок прямо здесь</h2>
                      </div>
                 </nav>
                 <div class="logo-wrapper">
-                    <img class="header-logo" src="../assets/img/talents-white.svg" alt="Talents">
+                    <img class="header-logo" src="../assets/img/amongtalents.svg" alt="amongtalents">
                 </div>
                 <div class="logo-description">
                      <h2>Таланты со всех площадок прямо здесь</h2>
@@ -36,22 +36,21 @@ export default {
     },
         methods: {
         toggleActive() {
-            console.log('clock')
             this.active = !this.active
         }
     }
 }
 </script>
 
-<style lang="sass">
+<style scoped lang="sass">
 .hamburger
     display: none
 .header 
     display: flex
-    height: 64px
     align-items: center
     justify-content: space-between
-    padding: 0px 30px
+    min-height: 40px
+    padding: 0 30px
     color: var(--white)
     box-shadow: 0px 4px 4px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(255, 255, 255, 0.14), 0px 1px 10px 0px rgba(255, 255, 255, 0.12)
     position: fixed
@@ -64,10 +63,7 @@ export default {
     display: flex
     list-style: none
     justify-content: space-between
-.menu__item
-    margin-right: 15px
-.menu__item:last-child 
-    margin-right: 0px
+
 .close
     display: none
 .logo-wrapper 
@@ -75,17 +71,22 @@ export default {
     align-items: center
     justify-self: center
 .header-logo 
-    width: 175px
+    width: 100px
     display: block
+    padding: 10px 0
+.menu__item
+    margin-right: 10px
+    &:last-child
+        margin-right: 0
 .menu__link 
     text-decoration: none
-    font-size: 20px
-    transition: .4s ease all
+    font-size: 18px
     color: var(--white)
+    transition: 0.2s ease
     &:hover
         color: var(--mainColor)
 .nuxt-link-active 
-    color: var(--mainColor)
+    color: var(--mainColor) !important
 h2
     font-weight: 400
     font-size: 20px
@@ -99,6 +100,7 @@ h2
         font-size: 36px
         display: block
         position: absolute
+        cursor: pointer
     .header
         justify-content: center
     .logo-description
@@ -112,7 +114,7 @@ h2
         right: 0
         padding: 25px
         background: var(--dark)
-        transition: .5s ease all
+        transition: .4s ease all
     .navbar_active
         transform: translateX(0)
     .menu
@@ -123,6 +125,7 @@ h2
         right: 15px
         top: 15px
         font-size: 45px
+        cursor: pointer
     .menu__mobile
         display: block
         position: absolute
@@ -131,4 +134,7 @@ h2
         align-self: flex-start
         margin-right: 0
         margin-bottom: 15px
+    .nuxt-link-active 
+        color: var(--mainColor)
+        background-color: transparent !important
 </style>

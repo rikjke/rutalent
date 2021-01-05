@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
         <div class="footer-text">
-            <img src="../assets/img/talents-white.svg" alt="logotype-white"><h3> made by Rikjke {{new Date().getFullYear()}}</h3>
+            <img src="../assets/img/amongtalents.svg" alt="amongtalents-footer-logo"><h3> made by Rikjke {{new Date().getFullYear()}}</h3>
         </div>
     </footer>
 </template>
@@ -23,7 +23,6 @@ export default {
     display: flex
     align-items: center
     background: var(--dark)
-    color: var(--white)
     text-align: center
     h3
         letter-spacing: 1.5px
@@ -38,4 +37,8 @@ export default {
     .footer-text
         flex-direction: column
         align-items: flex-start
+@media screen and (max-width: 576px)
+    .footer
+        justify-content: flex-start
+        padding-left: 15px
 </style>

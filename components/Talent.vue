@@ -1,18 +1,19 @@
 <template>
     <div @mouseleave="TALENT_HOVER_OFF" @mouseover="TALENT_HOVER_ON" :class="`talent-wrapper talent-${talentData.platform}`">
-        <div class="talent__date">Статья актуальна на {{talentData.date}}</div>
-        <NuxtLink  no-prefetch class="talent__link" :to="{name : 'talent', params: {talentURL: talentData.talentURL}}" >
+        <div class="talent-card__date">Статья актуальна на {{talentData.date}}</div>
+        <NuxtLink  no-prefetch class="talent-card__link" :to="{name : 'talent', params: {talentURL: talentData.talentURL}}" >
                 
                 <div class="talent">
-                        <img slot="image" class="talent__img" v-lazy-load :data-src="require(`../assets/img/${this.talentData.talentCode}/${this.talentData.cardImg}`)" alt="">
-                    <div class="talent__bottom">
-                        <div class="talent__main">
-                            <h3 class="talent__name">{{talentData.talent}}</h3>
-                            <span class="talent__subject">{{talentData.topic}}</span>
+                        <img slot="image" class="talent-card__img" v-lazy-load :data-src="require(`../assets/img/${this.talentData.talentCode}/${this.talentData.cardImg}`)" alt="">
+                    <div class="talent-card__bottom">
+                        <div class="talent-card__main">
+                            <h3 class="talent-card__name">{{talentData.talent}}</h3>
+                            <span class="talent-card__subject">{{talentData.topic}}</span>
                         </div>
-                        <span class="talent__text">
+                        <p class="talent-card__text">
                             {{talentData.shortDescription}}
-                        </span>
+                        </p>
+
                     </div>
                 </div>
         </NuxtLink>
@@ -54,7 +55,7 @@ export default {
 </script>
 
 <style lang="sass">
-.talent__bottom
+.talent-card__bottom
     flex: 1
 .talent-opacity
     .talent-wrapper
@@ -71,12 +72,12 @@ export default {
     flex-direction: column
     margin: 0 auto
     &.talent-youtube
-        .talent__bottom
+        .talent-card__bottom
             background: var(--red)
     &.talent-twitch
-        .talent__bottom
+        .talent-card__bottom
             background: var(--mainColor)
-.talent__bottom
+.talent-card__bottom
     padding: 5px 10px
     color: var(--white)
     border-radius: 0px 0px 15px 15px
@@ -84,30 +85,35 @@ export default {
     display: flex
     flex-direction: column
     height: 100%
-.talent__date
+.talent-card__date
     text-align: center
     color: var(--white)
     border-radius: 15px 15px 0 0
     background: var(--dark)
-.talent__img 
+.talent-card__img 
     background: var(--white)
-.talent__main 
+.talent-card__main 
     display: flex
     justify-content: space-between
 
-.talent__link 
+.talent-card__link 
     text-align: center
     text-decoration: none
     border-radius: 10px
     transition: .4s ease
     color: var(--dark)
     flex: 1
-.talent__text 
+.talent-card__text 
     margin: 5px 0
+    text-align: left
 
-.talent__subject 
+.talent-card__subject 
     font-size: 18px
     font-weight: bold
-
+.talent-card__name
+    text-align: left
+@media screen and (max-width: 990px)
+    .talent-wrapper
+        width: 90%
 
 </style>

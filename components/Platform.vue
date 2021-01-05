@@ -2,7 +2,7 @@
     <div class="platform">
         <div class="switcher-wrapper">
             <div class="switcher">
-                <button :style="platform.active ? {background: platform.color} : {background: '#fff'}" :class="platform.active ? 'switch switch_active' : 'switch'" v-for="(platform, index) in PLATFORMS" :key="index" @click="platform_pick(index)"><font-awesome-icon :style="platform.active ? {color: 'var(--white)'} : {color: platform.color}" v-if="platform.indicator != 'all'" :icon="['fab', platform.indicator]"/>{{platform.platform}}</button>
+                <button :style="platform.active ? {background: platform.color} : {background: '#fff', color: platform.color}" :class="platform.active ? 'switch switch_active' : 'switch'" v-for="(platform, index) in PLATFORMS" :key="index" @click="platform_pick(index)"><font-awesome-icon :style="platform.active ? {color: 'var(--white)'} : {color: platform.color}" v-if="platform.indicator != 'all'" :icon="['fab', platform.indicator]"/>{{platform.platform}}</button>
             </div>
         </div>
 
@@ -51,7 +51,7 @@ export default {
         transition: .4s ease
         font-size: 20px
         margin-right: 10px
-        padding: 2px 24px
+        padding: 6px 24px
         border-radius: 10px
         color: var(--dark)
         position: relative

@@ -29,8 +29,8 @@ export default {
 
 <style lang="sass" scoped>
     .talent-social-link
-        margin-right: 20px
-        font-size: 45px
+        margin-right: 10px
+        font-size: 48px
         color: var(--mainColor)
         svg
             transition: .4s ease all

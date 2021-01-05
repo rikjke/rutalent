@@ -29,6 +29,7 @@
     display: block
   body
     font-family: "Play", sans-serif
+    overflow-y: scroll
     font-size: 18px
     overflow-x: hidden
     position: relative
@@ -56,4 +57,8 @@
     color: var(--white)
   a
     color: var(--white)
+  a,button
+    user-select: none
+    -webkit-tap-highlight-color: transparent
+  
 </style>

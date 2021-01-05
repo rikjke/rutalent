@@ -9,13 +9,11 @@
                         <div :style="{color: talentData.themeColor}" class="platform-topic">
                             <span class="platform">{{talentData.platform === "youtube" ? "Youtube" : "Twitch"}}</span> <span class="topic">{{talentData.topic}}</span>  </div>
                     </div>
-                    <img class="talent__img" :src="require(`../assets/img/${this.talentData.talentCode}/${this.talentData.img}`)" alt="">
+                    <img v-lazy-load class="talent__img" :src="require(`../assets/img/${this.talentData.talentCode}/${this.talentData.img}`)" alt="">
 
                     <!-- <p v-for="p in talentData.text_about" :key="p" class="talent__p"> -->
-                        <v-runtime-template class="talent__p" v-for="p in talentData.text_about" :key="p" :template="`${p}`"></v-runtime-template>
+                        <v-runtime-template v-for="item in talentData.text_about" :key="item" :template="`${item}`"></v-runtime-template>
                     <!-- </p> -->
-
-                     <Gallery v-if="talentData.gallery" :talentCode="talentData.talentCode" :gallery="talentData.gallery" />
 
 
                     
@@ -26,10 +24,14 @@
 
                     <VideoList :videos_src="talentData.videos_src" />
                 </div>
+                <Gallery v-if="talentData.gallery" :talentCode="talentData.talentCode" :gallery="talentData.gallery" />
                 <TalentLinks v-if="talentData.talent_links" :name="talentData.talent" :talent_links="talentData.talent_links" />
 
 
-                <GoSupport />
+                <Message 
+                message="Если тебе показался полезным этот контент, а так же ты знаешь ютубера/стримера, которого здесь нет, но он заслуживает здесь находиться, ты можешь помочь проекту, предложив его 🤝"
+                link="/support"
+                linkMessage="Предложить"/>
 
 
             </section>
@@ -78,50 +80,76 @@ export default {
 
 </script>
 
-<style scoped lang="sass">
-    .talent__p
-        margin: 5px 0
-        font-size: 18px
-        text-indent: 35px
-        line-height: 26px
-    .talent-main
-        padding: 0 40px
-        display: grid
-        grid-template-columns: 8fr 5fr
-        // display: flex
-        // flex-wrap: wrap
-        margin: 35px 0
-    .talent-info
-        display: flex
-        flex-direction: column
-        // flex-basis: 65%
-    .talent__content
-        // flex-basis: 35%
-        display: flex
-        text-align: center
-        flex-direction: column
-        h2
-            font-weight: bold
-            margin-bottom: 40px
-            font-size: 24px
-    .talent__img
-        display: block
-        width: 100%
-        margin: 0 auto
-        margin-bottom: 30px
-    .talent__description
-        margin-bottom: 15px
-        display: flex
-        align-items: center
-        justify-content: space-between
-    .platform-topic
+<style lang="sass">
+.talent__heading
+    font-size: 26px
+    margin: 10px 0
+.talent__list-item
+    margin-bottom: 10px
+    &:last-child
+        margin-bottom: 0
+.talent__list
+    margin: 0 0 10px 40px
+.talent-main
+    padding: 0 40px
+    display: flex
+    flex-direction: column
+    width: 70%
+    margin: 35px 0
+.talent-info
+    display: flex
+    flex-direction: column
+    // flex-basis: 65%
+.talent__content
+    // flex-basis: 35%
+    position: absolute
+    right: 0px
+    width: 30%
+    display: flex
+    text-align: center
+    flex-direction: column
+    h2
         font-weight: bold
-        align-self: center
-    .talent__link
-        font-size: 45px
-        color: var(--red)
-        transition: .6s ease
-        transform: scale(1)
-        &:hover
-            transform: scale(1.2)
+        margin-bottom: 40px
+        font-size: 28px
+.talent__img
+    display: block
+    width: 100%
+    margin: 0 auto
+    margin-bottom: 30px
+.talent__description
+    margin-bottom: 15px
+    display: flex
+    align-items: center
+    justify-content: space-between
+.platform-topic
+    font-weight: bold
+    align-self: center
+    text-align: right
+.talent__link
+    font-size: 45px
+    color: var(--red)
+    transition: .6s ease
+    transform: scale(1)
+    &:hover
+        transform: scale(1.2)
+.talent__p
+    margin: 5px 0
+    font-size: 19px
+    line-height: 26px
+
+@media screen and (max-width: 990px)
+    .talent-info
+        margin-bottom: 25px
+    .video
+        width: 90%
+    .talent__content
+        position: static
+        width: auto
+    .talent-main
+        width: 100%
+@media screen and (max-width: 576px)
+    .talent-main
+        padding-left: 10px
+        padding-right: 10px
 </style>

@@ -24,21 +24,25 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-    h2
-        text-align: center
-        font-size: 38px
-        font-weight: bold
-        margin-bottom: 15px
-    .talent-gallery
-        margin: 50px auto
-    .gallery__img
-        width: 100%
-        height: 100%
-        object-fit: cover
+h2
+    text-align: center
+    font-size: 38px
+    font-weight: bold
+    margin-bottom: 15px
+.talent-gallery
+    margin: 50px auto
+.gallery__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+.gallery
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 15px
+    width: 75%
+    margin: 0 auto
+@media screen and (max-width: 576px)
     .gallery
-        display: grid
-        grid-template-columns: 1fr 1fr
-        grid-gap: 15px
-        width: 75%
-        margin: 0 auto
+        width: 100%
+        grid-template-columns: 1fr
 </style>
