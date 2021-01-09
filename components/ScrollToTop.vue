@@ -1,40 +1,19 @@
 <template>
-    <a :style="scroll === 0 ? {transform: 'translateX(100px)'} : {transform: 'translateX(0)'}" class="scroll-to-top" href="#">
+    <a class="scroll-to-top" href="javascript:void(0)" onclick="window.scroll(0,1)">
     <font-awesome-icon class="icon" :icon="['fas', 'arrow-up']"/> </a>
 </template>
 
-<script>
-export default {
-    methods: {
-        getScroll() {
-            this.scroll = window.pageYOffset;
-        }
-    },
-    data() {
-        return {
-            scroll: null,
-        }
-    },
-    created: function () {
-       if (process.browser) {
-            window.addEventListener('scroll', this.getScroll);
-       }
-    },
-    destroyed: function () {
-        if (process.browser) {
-            window.removeEventListener('scroll', this.getScroll);
-        }
-    }
-}
-</script>
 
 <style scoped>
     .scroll-to-top {
         position: fixed;
         bottom: 0;
         right: 0;
-        padding: 9px;
-        border-radius: 15px 0 0 0;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background: var(--mainColor);
         color: var(--white);
         transition: .8s ease;

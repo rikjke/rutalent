@@ -12,7 +12,6 @@
 
 <script>
 import {mapGetters, mapActions} from 'vuex'
-import TalentList from './TalentList'
 export default {
     created () {
         this.platform_pick(0);
@@ -32,9 +31,6 @@ export default {
         platform_pick(index) {
             this.PLATFORM_PICK(index)
         }
-    },
-    components: {
-        TalentList,
     }
 }
 </script>

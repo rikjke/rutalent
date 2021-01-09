@@ -78,6 +78,21 @@ export default {
     ['nuxt-lazy-load', {
       defaultImage: '/talents.png',
       directiveOnly: true
+    }],
+    '@nuxtjs/axios',
+    ['nuxt-mail', {
+      smtp: {
+        host: "smtp.example.com",
+        port: 587,
+        tls: {
+          // do not fail on invalid certs
+          rejectUnauthorized: false
+        },
+        auth: {
+          user: 'fanat10qdfd@gmail.com',
+          pass: 'neroflein6712'
+        }
+      },
     }]
   ],
   // Build Configuration (https://go.nuxtjs.dev/config-build)

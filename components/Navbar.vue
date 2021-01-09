@@ -122,7 +122,7 @@ h2
     .close
         display: inline-block
         position: absolute
-        right: 15px
+        right: 65px
         top: 15px
         font-size: 45px
         cursor: pointer

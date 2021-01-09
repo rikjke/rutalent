@@ -1,5 +1,8 @@
 <template>
-     <h1>Support page here</h1>
+     <section class="support">
+          <Message message="Если ты знаешь хорошего ютубера/стримера и хочешь, чтобы о нем узнали другие, здесь ты можешь поделиться информацией о нем"/>
+          <SupportForm />
+     </section>
 </template>
 
 <script>

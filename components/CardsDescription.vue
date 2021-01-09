@@ -22,10 +22,20 @@
 
 
         <div class="message">
-            <img class="message__img" src="../assets/img/description/cards/card-date.jpg" alt="card-date">
             <p>Ещё ты можешь увидеть, насколько актуальна информация о таланте. Это касается контента и расписания таланта, они имеют свойство меняться со временем, поэтому бери это во внимание 🤞</p>
+            <img class="message__img" src="../assets/img/description/cards/card-date.jpg" alt="card-date">
+
         </div>
 
+
+             <div class="message">
+             <p>Нажав на карточку, ты перейдешь на страницу таланта. Там есть более подробное описание его канала, а также примеры контента (видео), галерея и ссылки на социальные сети/различные платформы</p>
+             <img style="border-radius: 10px" src="../static/content.png" alt="talent-content">
+             <img style="border-radius: 10px" src="../static/gallery.png" alt="talent-gallery">
+             <img style="border-radius: 10px" src="../static/links.png" alt="talent-socials">
+
+
+             </div>
 
 
         <Message 

@@ -11,9 +11,7 @@
                     </div>
                     <img v-lazy-load class="talent__img" :src="require(`../assets/img/${this.talentData.talentCode}/${this.talentData.img}`)" alt="">
 
-                    <!-- <p v-for="p in talentData.text_about" :key="p" class="talent__p"> -->
                         <v-runtime-template v-for="item in talentData.text_about" :key="item" :template="`${item}`"></v-runtime-template>
-                    <!-- </p> -->
 
 
                     
@@ -33,7 +31,8 @@
                 link="/support"
                 linkMessage="Предложить"/>
 
-
+                <NuxtLink class="back-to-talents" to="../talents">
+                <font-awesome-icon class="icon" :icon="['fas', 'directions']"/> </NuxtLink>
             </section>
 
     
@@ -137,7 +136,22 @@ export default {
     margin: 5px 0
     font-size: 19px
     line-height: 26px
-
+.back-to-talents
+    position: fixed
+    bottom: 39px
+    right: 0
+    width: 40px
+    height: 40px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: var(--mainColor)
+    color: var(--white)
+    transform: rotate3d(0, 1, 0, 180deg)
+    border-radius: 0 15px 0 0
+    z-index: 15
+.back-to-talents .icon 
+    font-size: 30px
 @media screen and (max-width: 990px)
     .talent-info
         margin-bottom: 25px
@@ -152,4 +166,8 @@ export default {
     .talent-main
         padding-left: 10px
         padding-right: 10px
+    .talent__description
+        flex-direction: column
+    .talent__link
+        margin: 15px 0
 </style>

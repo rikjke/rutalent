@@ -64,6 +64,8 @@ export default {
         transition: .4s ease
         &:hover
             transform: scale(1.1)
+    img
+        margin-top: 15px
 @media screen and (max-width: 576px)
     .message p
         font-size: 20px

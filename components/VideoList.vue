@@ -1,8 +1,8 @@
 <template>
     <div class="video-list">
-        <div class="video-desktop">
+
             <div v-for="(src, index) in videos_src" :key="index" class="youtube-player" :data-id="src"></div>
-        </div>
+
 
         <!-- <div v-else class="video-mobile">
           <Video v-for="(src, index) in videos_src" :key="index" :src="src" />
@@ -38,8 +38,6 @@ export default {
           playButton.setAttribute('class', 'play');
           div.appendChild(playButton);
           div.onclick = function() {
-              console.log(this)
-            // this.labnolIframe(this);
     
               var iframe = document.createElement('iframe');
               iframe.setAttribute(
@@ -56,20 +54,6 @@ export default {
           };
           playerElements[n].appendChild(div);
         }       
-      },
-      labnolIframe(div) {
-        var iframe = document.createElement('iframe');
-        iframe.setAttribute(
-          'src',
-          'https://www.youtube.com/embed/' + div.dataset.id + '?autoplay=1&rel=0'
-        );
-        iframe.setAttribute('frameborder', '0');
-        iframe.setAttribute('allowfullscreen', '1');
-        iframe.setAttribute(
-          'allow',
-          'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-        );
-        div.parentNode.replaceChild(iframe, div);
       }
     }
 
@@ -136,5 +120,8 @@ export default {
   transition: .4s ease all
   &:hover
     transform: scale(1.1)
-  
+.video-list
+  display: flex
+  flex-direction: column
+  align-items: center
 </style>
