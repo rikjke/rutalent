@@ -5,25 +5,25 @@
                 <h3>Основная информация</h3>
                 <div class="form-row">                
                     <div class="form-group">
-                        <label for="channelName">Название канала:</label>
-                        <input id="channelName" type="text">
+                        <label for="channelName">Название канала *:</label>
+                        <input ref="name" id="channelName" type="text">
                     </div>
                     <div class="form-group">
-                        <label for="category">Основная платформа:</label>
-                        <input id="categpry" type="text">
+                        <label for="platform">Основная платформа:</label>
+                        <input ref="platform" id="platform" type="text">
                     </div>                   
                      <div class="form-group">
                         <label for="category">Тематика:</label>
-                        <input id="categpry" type="text">
+                        <input ref="category" id="category" type="text">
                     </div>
                     <div class="form-group">
                         <label for="shortDescription">Короткое описание:</label>
-                        <textarea id="shortDescription" rows="5"></textarea>
+                        <textarea ref="shortDescription" id="shortDescription" rows="5"></textarea>
                     </div>                
                 </div>      
                 <div class="form-group description">
                     <label for="description">Подробное описание:</label>
-                    <textarea id="description" rows="10"></textarea>
+                    <textarea ref="description" id="description" rows="10"></textarea>
                 </div>        
 
             </div>
@@ -32,36 +32,39 @@
 
                  <div class="form-group">
                     <label for="youtube">Youtube<font-awesome-icon :icon="['fab', 'youtube']"/></label>
-                    <input id="youtube"/>
+                    <input ref="youtube" id="youtube"/>
                 </div>  
 
                 <div class="form-group">
                     <label for="twitch">Twitch<font-awesome-icon :icon="['fab', 'twitch']"/></label>
-                    <input id="twitch"/>
+                    <input ref="twitch" id="twitch"/>
                 </div> 
 
                 <div class="form-group">
                     <label for="instagram">Инстаграм<font-awesome-icon :icon="['fab', 'instagram']"/></label>
-                    <input id="instagram"/>
+                    <input ref="instagram" id="instagram"/>
                 </div>  
 
                 <div class="form-group">
                     <label for="telegram">Telegram<font-awesome-icon :icon="['fab', 'telegram']"/></label>
-                    <input id="telegram"/>
+                    <input ref="telegram" id="telegram"/>
                 </div> 
 
                 <div class="form-group">
                     <label for="vk">ВКонтакте<font-awesome-icon :icon="['fab', 'vk']"/></label>
-                    <input id="vk"/>
+                    <input ref="vk" id="vk"/>
                 </div>  
  
  
             </div>
           
 
-            <button @click="(e)=> {e.preventDefault(); sendEmail()}" class="form-button">Предложить</button>
+            <button @click.prevent="sendEmail" class="form-button">Предложить</button>
         </form>
+        <ThankYou v-if="thanks" @closeTY="close" />
+
     </div>
+    
 </template>
 
 
@@ -70,16 +73,64 @@
 
 
 export default {
+    data() {
+        return {
+            talent: {
+                name: '',
+                platform: '',
+                category: '',
+                shortDescription: '',
+                longDescription: '',
+                yt_link: '',
+                twitch_link: '',
+                insta_link: '',
+                tg_link: '',
+                vk_link: ''
+            },
+            thanks: false
+        }
+    },
     methods: {
         sendEmail() {
-            console.log('dsa')
-            this.$mail.send({
-            from: 'fanat10qdfd@gmail.com',
-            subject: 'Incredible',
-            text: 'This is an incredible test message',
-            to: 'fanat1qdfd@gmail.com',
-            })       
-            console.log('dsa')    
+            
+            
+
+
+            this.talent.name = this.$refs.name.value;
+            this.talent.platform = this.$refs.platform.value;
+            this.talent.category = this.$refs.category.value;
+            this.talent.shortDescription = this.$refs.shortDescription.value;
+            this.talent.longDescription = this.$refs.description.value;
+            this.talent.yt_link = this.$refs.youtube.value;
+            this.talent.twitch_link = this.$refs.twitch.value;
+            this.talent.insta_link = this.$refs.instagram.value;
+            this.talent.tg_link = this.$refs.telegram.value;
+            this.talent.vk_link = this.$refs.vk.value;
+            fetch('https://amongtalents-default-rtdb.firebaseio.com//talents.json', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(this.talent),
+            }).catch(error =>  {
+                console.log(error);
+                throw error;
+            });
+
+            this.$refs.name.value = '';
+            this.$refs.platform.value = '';
+            this.$refs.category.value = '';
+            this.$refs.shortDescription.value = '';
+            this.$refs.description.value = '';
+            this.$refs.youtube.value = '';
+            this.$refs.twitch.value = '';
+            this.$refs.instagram.value = '';
+            this.$refs.telegram.value = '';
+            this.$refs.vk.value = '';
+            this.thanks = true;
+        },
+        close() {
+            this.thanks = false;
         }
     },
 }

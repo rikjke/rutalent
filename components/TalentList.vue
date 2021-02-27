@@ -9,19 +9,29 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
+import {mapGetters, mapActions} from 'vuex'
 export default {
+
 
     computed: {
         ...mapGetters([
             'OUTPUT'
         ]),
+
     },
     props: {
         platform: {
             type: String,
             default: 'all'
         },
+    },
+    methods: {
+        ...mapActions([
+            'OUTPUT_RANDOMIZE'
+        ])
+    },
+    mounted () {
+        this.OUTPUT_RANDOMIZE();
     },
 }
 </script>

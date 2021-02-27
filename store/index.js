@@ -39,11 +39,17 @@ export const mutations = {
 
         state.listOutput = state.youtubeData[0].talents.concat(state.twitchData[0].talents)
 
+    },
+    OUTPUT_RANDOMIZER(state) {
+        state.listOutput = state.listOutput.sort(() => Math.random() - 0.5)
     }
 }
 export const actions = {
     PLATFORM_PICK({commit}, index) {
         commit('PLATFORM_UPDATE', index)
+    },
+    OUTPUT_RANDOMIZE({commit}) {
+        commit('OUTPUT_RANDOMIZER')
     }
 }
 export const getters = {

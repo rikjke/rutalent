@@ -272,6 +272,46 @@
                     "5.jpg",
                     "6.jpg"
                 ]
+            },
+            {
+                "id": 7,
+                "talentCode": "scione",
+                "talent": "SciOne",
+                "topic": "Научпоп",
+                "themeColor": "#FF0000",
+                "shortDescription": "Команда молодых ученых, журналистов, научпоп-блогеров и других энтузиастов, стремящихся привить людям любовь к знаниям и научному миру выкладывают здесь множество достойных видео",
+                "cardImg": "scione-card.jpg",
+                "date": "08.1.2021",
+                "talentURL": "scione",
+                "img": "scione.jpg",
+                "talent_links": {
+                    "yt_link": "https://www.youtube.com/c/SciOne",
+                    "insta_link": "https://www.instagram.com/sci_one_tv/",
+                    "vk_link": "https://vk.com/sci_one",
+                    "patreon_link": "https://www.patreon.com/SciOne"
+
+                },
+                "platform": "youtube",
+                "videos_src": [
+                    "hHb9XJsxg44",
+                    "BUQKHKAUqmI",
+                    "wYXi-hMJqhw",
+                    "pfXE_B1SvwU",
+                    "E4ImPBZ3eM8"
+                ],
+                "text_about": [
+                    "<p class='talent__p'><a class='highlighted' href='https://www.youtube.com/c/SciOne' target='_blank'>SciOne</a> — это не один научпоп-блогер, это целая команда людей. Помимо тех, кто напрямую работает над развитием этого канала, здесь часто появляются уже всем известные и самостоятельные ютуберы, тоже снимающие научно-популярный контент. Благодаря большому количеству заинтересованных в развитии этой идеи людей, на канале есть много различных, непохожих друг на друга рубрик. Каналом занимаются как и молодые таланты, так и набравшиеся опыта профессоры и эксперты.</p>",
+                    "<div class='talent__categories'><h3 class='talent__heading'>Категории канала</h3><ul class='talent__list'><li class='talent__list-item'><a class='highlighted' target='_blank' href='https://www.youtube.com/playlist?list=PL0S_wSs_HtCs-yxrRlRfO7OwCDiYyT0Tv'>Мозг, мышление, познание</a> — объемный плейлист с размышлениями на тему науки, интеллекта человека, о том, как человек познает различные сущности и ответы на вопросы, связанные с нашим мышлением</li><li class='talent__list-item'><a class='highlighted' target='_blank' href='https://www.youtube.com/playlist?list=PL0S_wSs_HtCszBiXr0iwbZBuA6LdJ7Sap'>Ковчег Идей</a> — плейлист, где собраны возможно важнейшие идеи и представления человека по разным направлениям. Отборкой этих идей для канала занимались ведущие российские ученые и специалисты</li><li class='talent__list-item'><a class='highlighted' target='_blank' href='https://youtube.com/playlist?list=PL0S_wSs_HtCu2zKBam7_XYUsUScUEnTQt'>Мозговой Штурм</a> — место, где эксперты из различных областей знакомят вас со спорными, нетривиальными вопросами из мира науки, культуры, философии и ответами на них</li><li class='talent__list-item'><a class='highlighted' target='_blank' href='https://youtube.com/playlist?list=PL0S_wSs_HtCsa2IKAZPP8JaptM2mEsjUV'>Введение в нанотехнологии</a> — место, где Дмитрий Побединский рассказывает про новые технологии, изобретения: начиная с того, как они были созданы и заканчивая тем, как человек извлекает из них пользу</li><li class='talent__list-item'><a class='highlighted' target='_blank' href='https://www.youtube.com/playlist?list=PL0S_wSs_HtCvnyacbfNsJOFT_sv9Ek3Vx'>Пушка</a> — отборные новости из мира науки и технологий</li><li class='talent__list-item'><a class='highlighted' target='_blank' href='https://www.youtube.com/playlist?list=PL0S_wSs_HtCvqMXnCNlFIK-u_75G2la-O'>Кто здесь главный?</a> Кто принимает решения, которые мы называем своими, за нас? Подробнее узнать о функционировании мозга можно благодаря плейлисту от Вячеслава Дубынина</li><li class='talent__list-item'><a class='highlighted' target='_blank' href='https://youtube.com/playlist?list=PL0S_wSs_HtCtarLUGKqGU-1nAC_8aq6mG'>Понять за N минут</a>. Рубрика, в которой за маленький промежуток времени тебе постараются объяснить какую-то вещь</li><li class='talent__list-item'><a class='highlighted' target='_blank' href='https://www.youtube.com/playlist?list=PL0S_wSs_HtCss0mv1kFPxpiv_NCR17Huc'>Зона Брока</a> — ток-шоу Александра Панчина с часовыми интервью/подкастами на научные темы, разумеется совместно с приглашенными специалистами</li><li class='talent__list-item'>Так как каналом занимается целая команда, на канале есть целые плейлисты, которые связаны с конкретными людьми. Среди таких плейлистов: <a class='highlighted' target='_blank' href='https://youtube.com/playlist?list=PL0S_wSs_HtCuoMbnHFNsa_7Vim-8H2KKv'>Влад Гончарук</a>, <a class='highlighted' target='_blank' href='https://www.youtube.com/playlist?list=PL0S_wSs_HtCt_psxfShaSyhInCdAtaqU5'>Валентин Конон</a>, <a class='highlighted' target='_blank' href='https://www.youtube.com/playlist?list=PL0S_wSs_HtCt1pp3AVGdXVRqxiaLSbfOM'>Иван Лозовой</a>, <a class='highlighted' target='_blank' href='https://youtube.com/playlist?list=PL0S_wSs_HtCtFEJYl9T8zP0xzR-nUiZsh'>Александр Сергеев</a>, <a class='highlighted' target='_blank' href='https://youtube.com/playlist?list=PL0S_wSs_HtCuv1YVvsbchThhB8_JzK79t'>Александр Панчин</a>, <a class='highlighted' target='_blank' href='https://www.youtube.com/playlist?list=PL0S_wSs_HtCvMIEx5oJnoybj9tHXtOuHl'>Станислав Дробышевский</a>, <a class='highlighted' target='_blank' href='https://www.youtube.com/playlist?list=PL0S_wSs_HtCtBBX8IwXCOk4VE4kSbp3m9'>Дмитрий Гусев</a> и <a class='highlighted' target='_blank' href='https://www.youtube.com/playlist?list=PL0S_wSs_HtCuFLVjPNKt-VNwOZdo8KNZA'>Артур Шарифов</a> (Артур, кстати говоря, уже описан как <NuxtLink class='highlighted' to='../talents/artur-sharifov'>талант</NuxtLink> на этом сайте)</li></ul></div>",
+                    "<div class='talent__schedule'><h3 class='talent__heading'>Расписание/Активность</h3><p class='talent__p'>На канале уже существует огромный объем материала, чтобы пересмотреть который понадобится довольно таки много времени, а новые видео выходят в свет 2-3 раза в месяц.</p></div>"
+                ],
+                "gallery": [
+                    "1.jpg",
+                    "2.jpg",
+                    "3.jpg",
+                    "4.jpg",
+                    "5.jpg",
+                    "6.jpg"
+                ]
             }
  
         ]
