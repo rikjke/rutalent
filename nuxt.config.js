@@ -21,7 +21,9 @@ module.exports = {
  }   
 }
 export default {
+  target: 'static',
   router: {
+    base: 'http://rikjke.github.io/rutalent',
     extendRoutes(routes, resolve) {
       routes.find((r) => r.name === 'talent').path = '/talents/:talentURL'
       routes.find((r) => r.name === 'talent').props = true
